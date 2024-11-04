@@ -1,8 +1,8 @@
-// Select elements
+
 const contactListEl = document.getElementById("contactList");
 let contacts = JSON.parse(localStorage.getItem("contacts")) || [];
 
-// Function to display contacts
+
 function displayContacts() {
   contactListEl.innerHTML = ""; // Clear the current list
   contacts.forEach((contact, index) => {
@@ -19,7 +19,7 @@ function displayContacts() {
   });
 }
 
-// Function to add a new contact
+
 function addContact() {
   const name = document.getElementById("name").value;
   const phone = document.getElementById("phone").value;
@@ -34,14 +34,14 @@ function addContact() {
   }
 }
 
-// Function to delete a contact
+
 function deleteContact(index) {
   contacts.splice(index, 1);
   localStorage.setItem("contacts", JSON.stringify(contacts));
   displayContacts();
 }
 
-// Function to edit a contact
+
 function editContact(index) {
   const contact = contacts[index];
   const newName = prompt("Enter new name:", contact.name);
