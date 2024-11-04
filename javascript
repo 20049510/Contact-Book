@@ -7,7 +7,7 @@ function displayContacts() {
   contactListEl.innerHTML = ""; // Clear the current list
   contacts.forEach((contact, index) => {
     const contactEl = document.createElement("div");
-    contactEl.className = "contact";
+    contactEl.className = "contact"
     contactEl.innerHTML = `
       <span>${contact.name} - ${contact.phone}</span>
       <div>
