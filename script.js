@@ -13,3 +13,14 @@ async function fetchContacts() {
     `).join('');
 }
     
+async function addContact() {
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const [firstName, lastName] = name.split(' ');
+    await fetch('http://localhost:3000/contacts', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ FirstName: firstName, LastName: lastName || '', PhoneNumber: phone, Email: '', Address: '' })
+    });
+    fetchContacts();
+}
