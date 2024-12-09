@@ -24,3 +24,10 @@ async function addContact() {
     });
     fetchContacts();
 }
+
+async function deleteContact(id) {
+    await fetch(`http://localhost:3000/contacts/${id}`, { method: 'DELETE' });
+    fetchContacts();
+}
+
+// Initial fetch
