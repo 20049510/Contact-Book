@@ -7,6 +7,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
+
 // Connect to MySQL
 const db = mysql.createConnection({
     host: 'localhost',
@@ -22,7 +23,7 @@ db.connect(err => {
     }
     console.log('Connected to MySQL database');
 });
-
+url/api/contacts
 // API Endpoints
 app.get('/contacts', (req, res) => {
     db.query('SELECT * FROM Contacts', (err, results) => {
@@ -30,6 +31,9 @@ app.get('/contacts', (req, res) => {
         res.json(results);
     });
 });
+
+
+
 
 app.post('/contacts', (req, res) => {
     const { FirstName, LastName, PhoneNumber, Email, Address } = req.body;
