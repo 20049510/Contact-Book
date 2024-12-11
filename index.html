@@ -4,26 +4,100 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Book</title>
-  <style>
-    body { font-family: Arial, sans-serif; max-width: 600px; margin: auto; }
-    .contact-list { margin-top: 20px; }
-    .contact { display: flex; justify-content: space-between; padding: 10px; border: 1px solid #ddd; margin-top: 10px; }
-    button { margin: 0 5px; padding: 5px 10px; }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <h1>Contact Book</h1>
+
+  <!-- Contact Form -->
   <div>
     <input type="text" id="name" placeholder="Name">
+    <input type="email" id="email" placeholder="Email">
     <input type="text" id="phone" placeholder="Phone">
-    <button onclick="addContact()">Add Contact</button>
+    <input type="text" id="address" placeholder="Address">
+    <button onclick="createContact()">Add Contact</button>
+    <button onclick="viewContacts()">View Contacts</button>
   </div>
 
-  <div class="contact-list" id="contactList">
-    <!-- Contacts will be displayed here -->
-  </div>
+  <h2>Contacts</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Address</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="contacts-table">
+      <!-- Contacts will be displayed here -->
+    </tbody>
+  </table>
 
-  <script src="app.js"></script>
+  <script>
+    async function createContact() {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const address = document.getElementById('address').value;
+
+      const response = await fetch('http://localhost:3000/contacts', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, phone, address })
+      });
+
+      if (response.ok) {
+        alert('Contact added successfully!');
+      } else {
+        const error = await response.text();
+        alert(`Error: ${error}`);
+      }
+    }
+
+    async function viewContacts() {
+      const response = await fetch('http://localhost:3000/contacts');
+      const contacts = await response.json();
+      const contactsTable = document.getElementById('contacts-table');
+      contactsTable.innerHTML = '';
+      contacts.forEach(contact => {
+        contactsTable.innerHTML += `<tr>
+          <td>${contact.name}</td>
+          <td>${contact.email}</td>
+          <td>${contact.phone}</td>
+          <td>${contact.address}</td>
+          <td>
+            <button onclick="deleteContact(${contact.id})">Delete</button>
+            <button onclick="updateContact(${contact.id})">Update</button>
+          </td>
+        </tr>`;
+      });
+    }
+
+    async function deleteContact(id) {
+      const response = await fetch(`http://localhost:3000/contacts/${id}`, { method: 'DELETE' });
+      if (response.ok) {
+        viewContacts();
+      }
+    }
+
+    async function updateContact(id) {
+      const name = prompt('Enter new name:');
+      const email = prompt('Enter new email:');
+      const phone = prompt('Enter new phone:');
+      const address = prompt('Enter new address:');
+
+      const response = await fetch(`http://localhost:3000/contacts/${id}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, phone, address })
+      });
+
+      if (response.ok) {
+        viewContacts();
+      }
+    }
+  </script>
 </body>
 </html>
-
