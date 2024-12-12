@@ -53,6 +53,7 @@ These instructions will help you set up and run the project on your local machin
   npm install
 
 3. **Run the server**
+   
    sh
    node server.js
 
@@ -61,36 +62,39 @@ These instructions will help you set up and run the project on your local machin
   Open the index.html file in your preferred web browser.
 
 5.**Usage**
-  Add a Contact
 
-  Fill in the contact form (Name, Email, Phone, Address) and click the "Add Contact" button.
+•	Add a Contact
 
-  View Contacts
+•	Fill in the contact form (Name, Email, Phone, Address) and click the "Add Contact" button.
 
-  Click the "View Contacts" button to load and display all contacts.
+•	 View Contacts
 
-  Update a Contact
+•	 Click the "View Contacts" button to load and display all contacts.
 
-  Click the "Update" button next to the contact you want to update, enter the new details, and save the changes.
+•	  Update a Contact
 
-  Delete a Contact
+•	 Click the "Update" button next to the contact you want to update, enter the new details, and save the changes.
 
-  Click the "Delete" button next to the contact you want to delete.
+•	  Delete a Contact
+
+•	 Click the "Delete" button next to the contact you want to delete.
 
 5.**Project Structure**
-  index.html: The frontend HTML file.
 
-  styles.css: The CSS file for styling the frontend.
+•	index.html: The frontend HTML file
 
-  server.js: The backend server file that handles API requests.
+•	styles.css: The CSS file for styling the frontend.
 
-  contacts.db: The SQLite database file that stores contact information (created automatically).
+•	 server.js: The backend server file that handles API requests.
+
+•	 contacts.db: The SQLite database file that stores contact information (created automatically).
 
 6.**Technologies Used**
-  Frontend: HTML, CSS, JavaScript
 
-  Backend: Node.js, Express.js, SQLite
+•	Frontend: HTML, CSS, JavaScript
+
+•	 Backend: Node.js, Express.js, SQLite
 
 7.**Acknowledgments**
-  Inspired by simple CRUD applications.
 
+•	Inspired by simple CRUD applications.
