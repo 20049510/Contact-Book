@@ -57,9 +57,11 @@ These instructions will help you set up and run the project on your local machin
    sh
    node server.js
 
+
 4.**Open the project in a browser**
 
   Open the index.html file in your preferred web browser.
+  
 
 5.**Usage**
 
@@ -79,6 +81,7 @@ These instructions will help you set up and run the project on your local machin
 
 •	 Click the "Delete" button next to the contact you want to delete.
 
+
 5.**Project Structure**
 
 •	index.html: The frontend HTML file
@@ -89,11 +92,13 @@ These instructions will help you set up and run the project on your local machin
 
 •	 contacts.db: The SQLite database file that stores contact information (created automatically).
 
+
 6.**Technologies Used**
 
-•	Frontend: HTML, CSS, JavaScript
+- Frontend: HTML, CSS, JavaScript
 
 •	 Backend: Node.js, Express.js, SQLite
+
 
 7.**Acknowledgments**
 
