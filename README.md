@@ -49,13 +49,15 @@ These instructions will help you set up and run the project on your local machin
    cd contact-book
    
 2.**Install dependencies**
+
   sh
   npm install
   
   
 3.**Run the server**
+
   sh
-   node server.js
+  node server.js
 
 
 4.**Open the project in a browser**
