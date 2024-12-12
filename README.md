@@ -65,41 +65,41 @@ These instructions will help you set up and run the project on your local machin
 
 5.**Usage**
 
-•	Add a Contact
+- Add a Contact
 
-•	Fill in the contact form (Name, Email, Phone, Address) and click the "Add Contact" button.
+  Fill in the contact form (Name, Email, Phone, Address) and click the "Add Contact" button.
 
-•	 View Contacts
+- View Contacts
 
-•	 Click the "View Contacts" button to load and display all contacts.
+  Click the "View Contacts" button to load and display all contacts.
 
-•	  Update a Contact
+- Update a Contact
 
-•	 Click the "Update" button next to the contact you want to update, enter the new details, and save the changes.
+  Click the "Update" button next to the contact you want to update, enter the new details, and save the changes.
 
-•	  Delete a Contact
+- Delete a Contact
 
-•	 Click the "Delete" button next to the contact you want to delete.
-
-
-5.**Project Structure**
-
-•	index.html: The frontend HTML file
-
-•	styles.css: The CSS file for styling the frontend.
-
-•	 server.js: The backend server file that handles API requests.
-
-•	 contacts.db: The SQLite database file that stores contact information (created automatically).
+  Click the "Delete" button next to the contact you want to delete.
 
 
-6.**Technologies Used**
+5.##Project Structure
+
+- index.html: The frontend HTML file
+
+- styles.css: The CSS file for styling the frontend.
+
+- server.js: The backend server file that handles API requests.
+
+- contacts.db: The SQLite database file that stores contact information (created automatically).
+
+
+6.##Technologies Used
 
 - Frontend: HTML, CSS, JavaScript
 
-•	 Backend: Node.js, Express.js, SQLite
+- Backend: Node.js, Express.js, SQLite
 
 
-7.**Acknowledgments**
+7.##Acknowledgments
 
-•	Inspired by simple CRUD applications.
+- Inspired by simple CRUD applications.
