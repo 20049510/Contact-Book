@@ -17,7 +17,7 @@ These instructions will help you set up and run the project on your local machin
 
 - Node.js and npm installed on your machine
 
-### Installation
+## Installation
 
 1. **Clone the repository**
 
@@ -36,11 +36,11 @@ These instructions will help you set up and run the project on your local machin
 
 These instructions will help you set up and run the project on your local machine.
 
-### Prerequisites
+## Prerequisites
 
 - Node.js and npm installed on your machine
 
-### Installation
+## Installation
 
 1. **Clone the repository**
 
@@ -93,13 +93,13 @@ These instructions will help you set up and run the project on your local machin
 - contacts.db: The SQLite database file that stores contact information (created automatically).
 
 
-6.### Technologies Used
+6.## Technologies Used
 
 - Frontend: HTML, CSS, JavaScript
 
 - Backend: Node.js, Express.js, SQLite
 
 
-7.### Acknowledgments
+7.## Acknowledgments
 
 - Inspired by simple CRUD applications.
