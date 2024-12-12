@@ -62,10 +62,10 @@ These instructions will help you set up and run the project on your local machin
 
 4.**Open the project in a browser**
 
-  Open the index.html file in your preferred web browser.
+  Open the index.html file in your preferred web browser. 
   
 
-5.**Usage**
+## Usage
 
 - Add a Contact
 
