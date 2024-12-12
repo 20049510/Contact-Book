@@ -51,10 +51,10 @@ These instructions will help you set up and run the project on your local machin
 2.**Install dependencies**
   sh
   npm install
-
-3. **Run the server**
-   
-   sh
+  
+  
+3.**Run the server**
+  sh
    node server.js
 
 
@@ -82,7 +82,7 @@ These instructions will help you set up and run the project on your local machin
   Click the "Delete" button next to the contact you want to delete.
 
 
-5.### Project Structure
+### Project Structure
 
 - index.html: The frontend HTML file
 
@@ -93,13 +93,13 @@ These instructions will help you set up and run the project on your local machin
 - contacts.db: The SQLite database file that stores contact information (created automatically).
 
 
-6.## Technologies Used
+## Technologies Used
 
 - Frontend: HTML, CSS, JavaScript
 
 - Backend: Node.js, Express.js, SQLite
 
 
-7.## Acknowledgments
+## Acknowledgments
 
 - Inspired by simple CRUD applications.
