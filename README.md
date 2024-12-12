@@ -84,7 +84,7 @@ These instructions will help you set up and run the project on your local machin
   Click the "Delete" button next to the contact you want to delete.
 
 
-### Project Structure
+## Project Structure
 
 - index.html: The frontend HTML file
 
